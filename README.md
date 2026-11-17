@@ -77,7 +77,7 @@ Commercial, cloud-hosted low-code mobile test automation platforms sorted in des
 
 Community-driven, open-source mobile test automation tools and low-code utilities, sorted in descending order by GitHub stargazers.
 
-| Project | GitHub Stars | License | Primary Tech Stack | Low-Code / Test Creation Style | Key Features & Architecture |
+| Project | GitHub_Stars | License | Primary Tech Stack | Low-Code / Test Creation Style | Key Features & Architecture |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **[Appium](https://github.com/appium/appium)** | [![Appium Stars](https://img.shields.io/github/stars/appium/appium?style=social&color=white)](https://github.com/appium/appium/stargazers) | ⚖️ Apache-2.0 | 💻 Node.js / Multi-language clients | ⌨️ Code-first engine; low-code via Inspector GUI & visual recorders | 🏆 Foundational standard for cross-platform automation across iOS, Android, and Windows via W3C WebDriver. Fastest baseline benchmark performance. |
 | **[Maestro](https://github.com/mobile-dev-inc/maestro)** | [![Maestro Stars](https://img.shields.io/github/stars/mobile-dev-inc/maestro?style=social&color=white)](https://github.com/mobile-dev-inc/maestro/stargazers) | ⚖️ Apache-2.0 | 💻 Java / Kotlin / YAML | 📝 Declarative YAML-based flows & Maestro Studio interactive inspector | ⚡ Zero-setup declarative syntax, built-in screen settling tolerance to eradicate flakiness, and full support for React Native, Flutter, and native UI. |
