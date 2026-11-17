@@ -1,141 +1,121 @@
-# Awesome-Low-Code-Mobile-Test-Automation
-
 # Awesome Low-Code Mobile Test Automation
 
-> A curated list of top Low-Code Mobile Test Automation platforms — both SaaS/Hosted commercial solutions and open-source alternatives for recording, authoring, and executing mobile app tests with minimal coding.
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Follow on GitHub](https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=social)](https://github.com/ishandutta2007)
+
+> A curated list of top **Low-Code Mobile Test Automation** tools, codeless frameworks, AI-driven test recorders, and cloud execution platforms for iOS and Android apps.
 > 🌟 Star this repo if you find it useful! 🌟
 
 ---
 
-## 📋 Table of Contents
+## 📌 Table of Contents
 
+- [Overview & Key Concepts](#-overview--key-concepts)
+- [Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [BrowserStack App Low-Code Automation](#browserstack-app-low-code-automation)
-  - [Katalon Studio](#katalon-studio)
-  - [Testim Mobile](#testim-mobile)
-  - [Repeato](#repeato)
-  - [Sofy.ai](#sofyai)
-  - [Waldo (Tricentis)](#waldo-tricentis)
-  - [Maestro Cloud](#maestro-cloud)
 - [Open-Source Software](#-open-source-software)
-  - [Appium](#appium)
-  - [Maestro (Open Source)](#maestro-open-source)
-  - [Hydra Lab](#hydra-lab)
-  - [Dogu](#dogu)
-  - [Pickleib](#pickleib)
+- [Feature Comparison Matrix](#-feature-comparison-matrix)
+- [Selection Guide](#-selection-guide--how-to-choose)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🔍 Overview & Key Concepts
+
+Mobile test automation has evolved beyond manual scripting. **Low-code mobile test automation** platforms leverage AI-assisted authoring, computer-vision element matching, declarative YAML workflows, and visual record-and-replay to drastically reduce authoring time, eliminate XPath flakiness, and empower cross-functional QA teams, developers, and product managers to maintain robust test coverage across native (Swift, Kotlin), cross-platform (Flutter, React Native), and hybrid mobile apps.
+
+---
+
+## 📈 Sector Overview & Market Dynamics
+
+The global mobile application testing market is valued at approximately **$7 billion to $14 billion** (projected to reach over $25 billion by 2032 at an estimated CAGR of **13%–17%**), driven by rapid mobile release cadences, diverse OEM form factors, and AI-assisted QA tooling. The sector exhibits a **moderately fragmented yet top-heavy structure**: enterprise spend is concentrated among continuous quality heavyweights (such as Tricentis, BrowserStack, and Sauce Labs), while a thriving, highly fragmented long-tail of innovative AI-native SaaS startups and dominant open-source ecosystems (led by Appium and Maestro) continuously shape developer workflows.
 
 ---
 
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted Low-Code Mobile Test Automation platforms. These are not open-source but are included as reference points for feature comparison.
+Commercial, cloud-hosted low-code mobile test automation platforms sorted in descending order by estimated company size (valuation / annual revenue).
 
-### BrowserStack App Low-Code Automation
-**Type:** AI-driven recorder with zero-setup cloud execution
-BrowserStack's App Low-Code Automation lets teams state test objectives in plain English and have AI generate automated mobile tests, with AI-assisted selectors that avoid XPaths and self-healing that adapts to UI changes [citation:1]. It supports manual DSL commands for fine-tuning, modules for reusable steps, variables, version history, and data-driven testing. Tests run instantly on **30,000+ real devices** with no setup, emulators, or simulators required [citation:1]. It covers functional, accessibility, local, and geolocation testing, with daily insights and logs delivered to your inbox [citation:1]. Reviewers highlight the recording aspect as intuitive for non-technical users and the module feature as valuable for reuse [citation:1].  
-**Best for:** Teams wanting a polished, zero-setup mobile recorder with AI-assisted authoring and execution on BrowserStack's real device cloud.
-
-### Katalon Studio
-**Type:** Low-code IDE with cloud-based mobile recorder
-Katalon Studio's **Mobile Recorder** allows recording objects on **cloud devices** starting from version 9.5.0, eliminating complex local setups and making mobile testing accessible to users with minimal coding experience [citation:2]. You upload your app to TestOps, select a device (e.g., Android 14 on Galaxy S24), and interact with the app in a mirrored Device View while Katalon captures objects in a tree structure [citation:2]. Recorded actions become test steps, with options to add, remove, or reorder actions before saving. Locator strategies can be changed and verified with a Highlight function [citation:2]. **Trade-off:** Cloud mobile recording requires a Test Execution - Cloud Mobile Native App testing subscription [citation:2].  
-**Best for:** Teams wanting a mature IDE that supports both local and cloud-based mobile recording with granular control over locators and test steps.
-
-### Testim Mobile
-**Type:** AI-based low-code testing with Enhanced Mode for cross-platform apps
-Testim Mobile provides low-code authoring for iOS and Android, with **Enhanced Mode** specifically designed for cross-platform and hybrid apps—React Native, Flutter, and apps with embedded web views—using proprietary technology that understands the application's internal structure for more stable tests [citation:14]. It supports test authoring and execution on a **Virtual Mobile Grid** in the cloud, as well as local physical devices, emulators, and simulators. Enhanced Mode enables test scenarios that were previously impossible with Appium [citation:14]. **Trade-off:** Native mobile support was in beta as of the preview announcement, with device lifecycle management handled via the Tricentis Mobile Agent [citation:3].  
-**Best for:** Teams building React Native, Flutter, or hybrid apps who have struggled with Appium's limitations on cross-platform frameworks.
-
-### Repeato
-**Type:** Computer vision-based no-code testing with local-first execution
-Repeato uses **computer vision and machine learning** to recognize UI elements from screen pixels, working without source code, element IDs, or reliable view hierarchies [citation:15]. It supports Flutter, React Native, Xamarin, Unreal Engine, and native iOS/Android apps, with execution on local devices, simulators, or in CI via the Repeato CLI [citation:4][citation:15]. Key characteristics include visual fingerprints for element matching, OCR and locator fallbacks, and a **local-first architecture** where Studio works offline and tests remain in a normal workspace directory [citation:15]. **Trade-off:** Visual fingerprints may need updating after meaningful design changes, and cloud features are optional rather than core [citation:15].  
-**Best for:** Teams wanting no-code mobile automation that works without source code access, particularly for cross-platform frameworks where Appium struggles.
-
-### Sofy.ai
-**Type:** AI agents for no-code real-device mobile testing
-Sofy provides **AI Mobile Testing Agents** that generate, execute, and maintain tests across real devices without writing scripts [citation:6]. It offers access to **2,000+ real device configurations**, performance profiling (CPU, memory, battery, network), app store compliance validation, and parallel testing. Native CI integrations include GitHub Actions, Azure DevOps, CircleCI, and GitLab [citation:6]. Pricing is pay-per-test with no monthly commitments [citation:6].  
-**Best for:** Teams wanting AI-agent-driven mobile testing on real devices with per-test pricing and existing CI pipeline integration.
-
-### Waldo (Tricentis)
-**Type:** Cloud-based mobile testing with best-in-class view tree
-Waldo (acquired by Tricentis) provides mobile testing with a focus on **simplicity** (no Appium install, no local configuration) and **universality** (same remote device environment every run) [citation:5]. Its standout claim is a **best-in-class view tree** that "sees" the structure of mobile views better than other tools—enabling test flows that are not possible on other platforms, particularly for hybrid apps (React Native, Flutter, Ionic) where Appium support is poor [citation:5]. Session Replays capture video, device logs, and network requests with synchronized interaction timelines, shareable via public links [citation:5].  
-**Best for:** Teams with hybrid or cross-platform apps where element visibility is a persistent problem, and who value rich session replay artifacts for debugging.
-
-### Maestro Cloud
-**Type:** Managed cloud execution for Maestro flows
-Maestro Cloud provides **enterprise-grade infrastructure** for parallel execution of Maestro test flows, eliminating local emulator/simulator configuration and reducing test execution time by up to **90%** through asynchronous parallel runs [citation:8]. It supports device isolation (every virtual device wiped between tests), flexible configuration (Android API levels, iOS models), global testing via `--device-locale`, and cross-platform support for Android (Views/Compose), iOS (UIKit/SwiftUI), React Native, Flutter, and Web [citation:8]. Native CI integrations include GitHub Actions, Bitrise, Bitbucket Pipelines, and CircleCI, with PR integration for GitHub that can block merges on test failures [citation:8].  
-**Best for:** Teams already using Maestro's YAML-based flows who need parallel cloud execution without managing local emulators.
+| Platform | Company Valuation / Revenue Size | Starting Paid Pricing | Free Forever Limit / Free Trial Limit | Best For | Core Highlights |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Waldo (Tricentis)](https://www.tricentis.com/products/testim-mobile)** | **$4.5B Valuation** / ~$500M ARR (Parent: Tricentis) | **$150/month per user** (billed annually via Tricentis suite entry) | **14-day free trial** with access to cloud virtual devices; enterprise PoC sandbox available | Hybrid (React Native / Flutter) and native apps needing deep element inspection | Proprietary view-tree parser that maps complex hybrid view hierarchies, session replay, and zero Appium configuration. |
+| **[Testim Mobile](https://www.tricentis.com/products/testim-mobile)** | **$4.5B Valuation** / ~$500M ARR (Parent: Tricentis) | **$150/month per seat** (billed annually under Tricentis test management) | **Free Community Tier:** 1,000 test runs/month, 1 active execution slot, and 14-day full Pro trial | Cross-platform teams (React Native, Flutter) with web/mobile parity requirements | AI-powered Smart Locators, Enhanced Mode for shadow DOM/embedded views, and cross-platform grid management. |
+| **[BrowserStack App Low-Code Automation](https://www.browserstack.com/app-automate)** | **$4.0B Valuation** / ~$230M ARR | **$199/month per parallel test** (billed annually for App Automate) | **Free Trial:** 100 minutes of automated mobile testing across real iOS/Android devices | Enterprise & high-velocity teams needing massive real-device coverage | Natural-language test prompt generation, AI-assisted self-healing selectors, and access to 30,000+ real mobile devices. |
+| **[Katalon Studio](https://katalon.com/)** | **~$30M Total Funding** / ~$40M–$60M ARR | **$150/month per seat** (Studio Pro, billed annually at $1,800/yr) | **Free Forever Edition:** Unlimited manual local IDE tests, plus a **30-day free trial** of Enterprise & Cloud Engine features | Teams transitioning from manual QA to structured, low-code keyword pipelines | Cloud Mobile Recorder on remote devices, object tree inspection, AI self-healing locators, and dual-mode script/GUI editing. |
+| **[Sofy.ai](https://sofy.ai/)** | **~$9.6M Total Funding** / ~$5M–$15M ARR | **$549/month** (Starter tier billed annually; ~$49/mo limited ad-hoc runner) | **Free Trial:** 14-day guided product trial with 100 real-device execution minutes | Teams looking for no-code autonomous AI testing agents on real hardware | Autonomous test execution, performance profiling (battery, CPU, memory), and automated app-store compliance checks. |
+| **[Maestro Cloud (mobile.dev)](https://cloud.mobile.dev/)** | **~$3.0M Seed Funding** (mobile.dev) / Early-stage SaaS | **$250/month per concurrent device** | **7-day free trial** with parallel device execution credits; local CLI/Studio is 100% free forever | High-cadence mobile teams running declarative YAML flows in CI/CD | Fast parallel execution, automated emulator wipe between test runs, zero setup overhead, and deep GitHub Actions integration. |
+| **[Repeato](https://www.repeato.app/)** | **Bootstrapped / Seed** / Micro-SaaS | **$70/month per user** (Basic tier, billed monthly) | **Free Forever Tier:** 5 Android tests, 5 iOS tests, 5 Web tests, 20 AI vision assertions/month, 5 cloud mins/month | Privacy-focused teams and games/apps without accessible element IDs | Pixel-based computer vision & OCR recognition, local-first offline storage, and source-code-independent test creation. |
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven Low-Code Mobile Test Automation tools. The open-source ecosystem spans **full cross-platform automation frameworks**, **declarative YAML-based testers**, **distributed test execution platforms**, **older GUI-based tools**, and **BDD-style step libraries**.
+Community-driven, open-source mobile test automation tools and low-code utilities, sorted in descending order by GitHub stargazers.
 
-### Appium
-**Stack:** Node.js (core) with clients for Java, Python, JS, Ruby, C# | **License:** Apache-2.0
-Appium is the foundational open-source mobile automation framework, using the **W3C WebDriver protocol** for native iOS and Android automation. It is not low-code in the visual recorder sense—tests are written in code—but it is the **engine underneath many commercial low-code tools**, and its ecosystem includes the **Appium Inspector** GUI for element inspection and locator generation. Performance studies show Appium has the **fastest average test execution time (10.50 sec)** and the most **linear scaling (1.92)** under parallel sessions among compared platforms [citation:7].  
-**Best for:** Engineering teams wanting full code-level control and the broadest ecosystem support, accepting that low-code authoring requires additional tooling.
-
-### Maestro (Open Source)
-**Stack:** Java / YAML flows | **License:** Apache-2.0
-Maestro is an open-source UI automation framework that uses **human-readable YAML flows** interpreted at runtime rather than compiled, with built-in tolerance that handles network delays and UI flakiness by waiting for the screen to settle [from previous context]. It supports Android, iOS (simulators), React Native, Flutter, and Web, with a single-script installation and no "setup hell." The open-source version runs locally; Maestro Cloud is the managed parallel execution layer [citation:8].  
-**Best for:** Teams wanting a lightweight, declarative mobile testing framework with YAML-based flows that can run locally or scale to Maestro Cloud.
-
-### Hydra Lab
-**Stack:** Java / Spring Boot / React / Docker | **License:** MIT (Microsoft)
-Hydra Lab is a framework from Microsoft for building a **self-hosted cloud testing platform** using devices in hand, with a center-agent architecture, test task management, and result visualization. It supports **Appium (Java), Espresso, XCTest, Maestro, and Python Runner** across Android, iOS, Windows, and Web. Performance studies show Hydra Lab has a **scalability coefficient of 1.88** (near-linear scaling) and an average execution time of **11.32 sec**—second only to Appium among compared platforms [citation:7]. An out-of-box Docker image runs both center and agent instances [from previous context].  
-**Best for:** Teams wanting a proven, Microsoft-backed framework to build their own cloud testing platform with multi-framework support.
-
-### Dogu
-**Stack:** (Check repository) | **License:** Open Source
-Dogu is an open-source mobile test automation tool with its own GUI, device viewing, and Appium as its WebDriver backend—positioned as an **overlay on Appium** that adds convenience features not present in Appium by default [citation:7]. **Important performance findings:** Dogu showed the **worst performance and stability** among compared platforms, with the highest average test execution time (**12.88 sec**) and a **scalability coefficient of 3.43** (meaning it loses significant performance under parallel load) [citation:7]. It also had **no significant updates since 2022** as of the study, raising concerns about long-term support [citation:7].  
-**Best for:** Historical reference or small-scale use where its GUI conveniences outweigh performance concerns; not recommended for large parallel test suites.
-
-### Pickleib
-**Stack:** Java / Cucumber / Playwright & Appium | **License:** Open Source (GitHub)
-Pickleib is a test automation library that provides **built-in Cucumber step definitions** for WebUI, MobileUI, Desktop UI, API, Email, Database, and Localisation, with a focus on **low-code BDD-style test authoring** [citation:11]. For mobile, it wraps Appium with human-readable steps like `Fill input {element} on the {Page} with text: {value}`, `Verify presence of element`, and `Scroll until listed {element} is found` [citation:11]. It auto-detects page repository JSON or scans for `@PageObject`/`@ScreenObject` classes, reducing boilerplate for teams writing Cucumber tests.  
-**Best for:** Teams using Cucumber/BDD who want ready-made mobile step definitions on top of Appium without writing glue code.
+| Project | GitHub Stars | License | Primary Tech Stack | Low-Code / Test Creation Style | Key Features & Architecture |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Appium](https://github.com/appium/appium)** | [![Appium Stars](https://img.shields.io/github/stars/appium/appium?style=social&color=white)](https://github.com/appium/appium/stargazers) | Apache-2.0 | Node.js / Multi-language clients | Code-first engine; low-code via Inspector GUI & visual recorders | Foundational standard for cross-platform automation across iOS, Android, and Windows via W3C WebDriver. Fastest baseline benchmark performance. |
+| **[Maestro](https://github.com/mobile-dev-inc/maestro)** | [![Maestro Stars](https://img.shields.io/github/stars/mobile-dev-inc/maestro?style=social&color=white)](https://github.com/mobile-dev-inc/maestro/stargazers) | Apache-2.0 | Java / Kotlin / YAML | Declarative YAML-based flows & Maestro Studio interactive inspector | Zero-setup declarative syntax, built-in screen settling tolerance to eradicate flakiness, and full support for React Native, Flutter, and native UI. |
+| **[Airtest](https://github.com/AirtestProject/Airtest)** | [![Airtest Stars](https://img.shields.io/github/stars/AirtestProject/Airtest?style=social&color=white)](https://github.com/AirtestProject/Airtest/stargazers) | Apache-2.0 | Python / OpenCV / PyQt | Visual record-and-replay via AirtestIDE, image recognition & OCR | Cross-platform framework by NetEase utilizing image recognition to locate UI elements without source code. Exceptional for gaming and complex canvas apps. |
+| **[SoloPi](https://github.com/alipay/SoloPi)** | [![SoloPi Stars](https://img.shields.io/github/stars/alipay/SoloPi?style=social&color=white)](https://github.com/alipay/SoloPi/stargazers) | Apache-2.0 | Android Java / Desktop / CLI | On-device record-and-replay, multi-device sync, and AI harness | Alipay's wireless, non-invasive automated testing tool. Enables recording flows on-device, synchronized multi-device execution, and real-time performance tracking. |
+| **[Sonic](https://github.com/SonicCloudOrg/sonic-server)** | [![Sonic Stars](https://img.shields.io/github/stars/SonicCloudOrg/sonic-server?style=social&color=white)](https://github.com/SonicCloudOrg/sonic-server/stargazers) | Apache-2.0 | Java / Spring Boot / Vue.js | Visual web portal, step-by-step low-code test designer | Distributed cloud real-machine debugging and automation platform for iOS and Android devices, supporting visual remote control and batch execution. |
+| **[Appium Inspector](https://github.com/appium/appium-inspector)** | [![Appium Inspector Stars](https://img.shields.io/github/stars/appium/appium-inspector?style=social&color=white)](https://github.com/appium/appium-inspector/stargazers) | Apache-2.0 | Electron / React / TypeScript | Visual UI tree inspector, point-and-click action recorder | The official GUI companion to Appium. Inspects native/hybrid mobile application view hierarchies, tests XPath/accessibility selectors, and records steps into boilerplate code. |
+| **[Hydra Lab](https://github.com/microsoft/HydraLab)** | [![Hydra Lab Stars](https://img.shields.io/github/stars/microsoft/HydraLab?style=social&color=white)](https://github.com/microsoft/HydraLab/stargazers) | MIT | Java / Spring Boot / Docker | Multi-engine runner (Appium, Maestro, Espresso, XCTest) | Microsoft's enterprise-grade framework for self-hosting private device test clouds with a center-agent architecture and near-linear multi-device scalability. |
+| **[OpenTest](https://github.com/mcdcorp/opentest)** | [![OpenTest Stars](https://img.shields.io/github/stars/mcdcorp/opentest?style=social&color=white)](https://github.com/mcdcorp/opentest/stargazers) | MIT | Java / Node.js | Keyword-driven YAML / scriptless actions | Open-source keyword-driven automation platform for mobile (via Appium), web, and APIs. Designed for non-programmers to create tests using high-level action building blocks. |
+| **[Cerberus Testing](https://github.com/cerberustesting/cerberus-core)** | [![Cerberus Stars](https://img.shields.io/github/stars/cerberustesting/cerberus-core?style=social&color=white)](https://github.com/cerberustesting/cerberus-core/stargazers) | GPL-3.0 | Java / MySQL / Angular | 100% low-code / no-code web GUI test designer | Comprehensive open-source test management and execution platform that drives Appium, Selenium, and APIs from a single unified web portal. |
+| **[Dogu](https://github.com/dogu-team/dogu)** | [![Dogu Stars](https://img.shields.io/github/stars/dogu-team/dogu?style=social&color=white)](https://github.com/dogu-team/dogu/stargazers) | Open-Source | TypeScript / Rust | Visual desktop client & device streaming | Desktop GUI overlay on top of Appium for device streaming and test execution. *Note:* Inactive maintenance since 2022 and high overhead under parallel loads. |
+| **[Pickleib](https://github.com/Umutayb/pickleib)** | [![Pickleib Stars](https://img.shields.io/github/stars/Umutayb/pickleib?style=social&color=white)](https://github.com/Umutayb/pickleib/stargazers) | MIT | Java / Cucumber / Appium | Human-readable Gherkin/BDD step definitions & JSON selectors | Test automation utility library providing pre-configured Cucumber steps for mobile UI and Web, eliminating boilerplate glue code for BDD practitioners. |
 
 ---
 
-## 📊 Comparison at a Glance
+## 📊 Feature Comparison Matrix
 
-| Software | License | Stack | Visual Recorder | Cloud Execution | Self-Hosted | Best For |
-|----------|---------|-------|-----------------|-----------------|-------------|----------|
-| **BrowserStack** | Proprietary | Cloud | ✅ | ✅ 30,000+ devices | ❌ | Zero-setup AI recording |
-| **Katalon Studio** | Proprietary | Desktop + Cloud | ✅ Cloud Mobile Recorder | ✅ TestCloud | (Desktop) | Mature IDE + cloud recording |
-| **Testim Mobile** | Proprietary | Cloud | ✅ Enhanced Mode | ✅ Virtual Mobile Grid | ❌ | React Native / Flutter / Hybrid |
-| **Repeato** | Proprietary | Desktop + CI | ✅ Computer vision | ✅ CLI headless | ✅ (Local) | No source code needed |
-| **Sofy.ai** | Proprietary | Cloud | ✅ AI agents | ✅ 2,000+ devices | ❌ | AI agents + pay-per-test |
-| **Waldo** | Proprietary | Cloud | ✅ | ✅ | ❌ | Best-in-class view tree for hybrid |
-| **Maestro Cloud** | Proprietary | Cloud | (YAML flows) | ✅ Parallel | ❌ | Maestro flows at scale |
-| **Appium** | Apache-2.0 | Node.js + clients | (Inspector GUI) | (Via grids) | ✅ | Full control + ecosystem |
-| **Maestro OSS** | Apache-2.0 | Java / YAML | (YAML flows) | (Local only) | ✅ | Declarative YAML testing |
-| **Hydra Lab** | MIT | Java/Spring/Docker | (Check) | ✅ Center-agent | ✅ | Multi-framework cloud platform |
-| **Dogu** | Open Source | (Check) | ✅ GUI | (Check) | ✅ | Small-scale GUI use (perf caution) |
-| **Pickleib** | Open Source | Java/Cucumber | (BDD steps) | (Via Appium) | ✅ | BDD mobile step definitions |
+| Platform / Tool | Delivery Model | Authoring Style | iOS Support | Android Support | Cross-Platform (RN / Flutter) | Self-Healing Locators | Real-Device Cloud | Self-Hosted Option |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **BrowserStack** | Cloud SaaS | AI / Plain English / Recorder | ✅ | ✅ | ✅ | ✅ | ✅ (30k+ devices) | ❌ |
+| **Katalon Studio** | Desktop + Cloud | Cloud Recorder / Low-Code IDE | ✅ | ✅ | ✅ | ✅ | ✅ (TestCloud) | ✅ (Desktop Engine) |
+| **Testim Mobile** | Cloud SaaS | AI Smart Locators / Enhanced Mode | ✅ | ✅ | ✅ | ✅ | ✅ (Virtual Grid) | ❌ |
+| **Repeato** | Desktop App | Computer Vision / OCR | ✅ | ✅ | ✅ (No source needed) | ✅ (Visual Fuzzy) | ❌ (Local First) | ✅ |
+| **Sofy.ai** | Cloud SaaS | Autonomous AI Agents | ✅ | ✅ | ✅ | ✅ | ✅ (2k+ devices) | ❌ |
+| **Waldo** | Cloud SaaS | No-Code View Tree Recorder | ✅ | ✅ | ✅ | ✅ | ✅ (Hosted Simulators) | ❌ |
+| **Maestro Cloud** | Cloud Runner | Declarative YAML / Studio | ✅ | ✅ | ✅ | ✅ (Screen settling) | ✅ (Parallel Cloud) | ❌ |
+| **Appium (Core)** | Open-Source | Code / Appium Inspector | ✅ | ✅ | ✅ | ⚠️ (Requires plugins) | (Via external clouds) | ✅ |
+| **Maestro (OSS)** | Open-Source | Declarative YAML / Studio | ✅ | ✅ | ✅ | ✅ (Built-in tolerances) | (Via CI/Simulators) | ✅ |
+| **Airtest** | Open-Source | Image Recognition / AirtestIDE | ✅ | ✅ | ✅ (Games & Apps) | ⚠️ (Template matching) | (Via custom farm) | ✅ |
+| **SoloPi** | Open-Source | On-Device Wireless Record/Replay | ❌ (Android only) | ✅ | ✅ | ⚠️ (Accessibility based) | ❌ (On-device/Desktop) | ✅ |
+| **Sonic** | Open-Source | Web Portal Step Builder | ✅ | ✅ | ✅ | ❌ | ❌ (Private Cloud) | ✅ |
+| **Hydra Lab** | Open-Source | Multi-Framework Center/Agent | ✅ | ✅ | ✅ | (Framework dependent) | ❌ (Private Cloud) | ✅ |
+| **OpenTest** | Open-Source | Keyword-Driven YAML | ✅ | ✅ | ✅ | ❌ | (Via Appium grids) | ✅ |
+| **Cerberus** | Open-Source | Web GUI Test Designer | ✅ | ✅ | ✅ | ❌ | (Via Appium grids) | ✅ |
+
+---
+
+## 🎯 Selection Guide / How to Choose
+
+- **For Enterprise Teams Needing Real Devices & Compliance:** Choose **BrowserStack** (massive device fleet, AI test generation) or **Katalon Studio** (structured keyword-driven IDE with enterprise TestOps).
+- **For Hybrid, React Native, or Flutter Apps with Complex Trees:** Choose **Testim Mobile** or **Waldo (Tricentis)** for their specialized object inspectors that bypass Appium's element hierarchy limitations.
+- **For Modern Mobile Devs Wanting Fast CI/CD Tests:** Adopt **Maestro (Open Source)** for local development with declarative YAML, scaling to **Maestro Cloud** for parallel regression test runs.
+- **For Mobile Games, Canvas, or Source-Code-Less Apps:** Choose **Repeato** (commercial) or **Airtest** (open-source) for computer-vision and pixel-based OCR test recording.
+- **For On-Device Field Testing & Multi-Device Sync:** Deploy Alipay's **SoloPi** for lightweight, wireless on-device recording without PC dependencies.
+- **For Enterprise Self-Hosted Mobile Device Farms:** Deploy Microsoft's **Hydra Lab** or **Sonic** to orchestrate your organization's physical device fleet with zero external cloud cost.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Low-Code Mobile Test Automation tool that should be listed here, please open a pull request with:
+Contributions are welcome! If you know of an active low-code, codeless, or declarative mobile test automation project that should be added:
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
-
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source.
-
-**Note on the open-source ecosystem:** The open-source landscape for **low-code mobile test automation** is **led by Appium** as the foundational engine, with **Maestro** providing the most accessible declarative YAML-based alternative and **Hydra Lab** offering the strongest self-hosted cloud platform with proven near-linear scaling [citation:7]. **Dogu** provides GUI conveniences over Appium but has significant performance and maintenance concerns—it showed the worst scalability and has not had significant updates since 2022 [citation:7]. **Pickleib** fills a niche for BDD/Cucumber teams wanting pre-built mobile step definitions. No open-source project fully replicates BrowserStack's AI-driven zero-setup authoring or Waldo's best-in-class view tree for hybrid apps, but these tools cover the core low-code and declarative mobile testing workflows for self-hosted deployments.
+1. Fork this repository.
+2. Create a descriptive branch (`git checkout -b feature/add-new-tool`).
+3. Add the project to the appropriate table and comparison sections, following existing alphabetical or sorted guidelines.
+4. Ensure the tool is actively maintained with clear documentation.
+5. Submit a Pull Request.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
-
----
-
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+This repository is dedicated to the public domain under [Creative Commons Zero v1.0 Universal (CC0 1.0)](LICENSE).
